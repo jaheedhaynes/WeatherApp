@@ -11,8 +11,6 @@ import ImageKit
 
 class WeatherCell: UICollectionViewCell {
     
-    //var aWeather: WeatherData!
-    
     public lazy var dateLabel: UILabel = {
         let label = UILabel()
         label.textAlignment = .center
