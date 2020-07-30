@@ -14,7 +14,7 @@ struct PhotoAPI {
         
       let searchQuery = search.lowercased().addingPercentEncoding(withAllowedCharacters: .urlHostAllowed) ?? "Trees"
     
-        let endpointUrl = "https://pixabay.com/api/?key=14925791-e55b93cff640b8ac69f27ee10&q=\(searchQuery)"
+        let endpointUrl = "https://pixabay.com/api/?key=\(Secret.pixaBayKey)&q=\(searchQuery)"
         guard let url = URL(string: endpointUrl) else {
             completionHandler(.failure(.badURL(endpointUrl)))
             return
