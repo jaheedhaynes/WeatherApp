@@ -37,7 +37,6 @@ class WeatherViewController: UIViewController {
     
     //-------------------------------------------------------------------------------------
 
-
         override func viewDidLoad() {
             super.viewDidLoad()
             view.backgroundColor = .systemBackground
@@ -47,13 +46,14 @@ class WeatherViewController: UIViewController {
             mainView.weatherColectionView.delegate = self
             mainView.textField.delegate = self
             getZipcode(zip: selectedZipcode)
+            selectedZipcode = UserPreference.shared.getZipCode() ?? ""
             fetchRecentEnterZip()
         }
     
     //-------------------------------------------------------------------------------------
         
         private func fetchRecentEnterZip() {
-            guard let mostRecent = UserDefaults.standard.object(forKey: RecentSearchKey.zipOrCity) as? String else { return }
+            guard let mostRecent = UserDefaults.standard.object(forKey: UserPreferenceKey.zipcode) as? String else { return }
             getZipcode(zip: mostRecent)
         }
       

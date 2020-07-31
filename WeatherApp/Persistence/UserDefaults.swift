@@ -21,10 +21,13 @@ class UserPreference {
     func updateZipcode(with zipcode: String) {
         UserDefaults.standard.set(zipcode, forKey: UserPreferenceKey.zipcode)
     }
-    func getZipcode() -> String? {
-        guard let zip = UserDefaults.standard.object(forKey: UserPreferenceKey.zipcode) as? String else {
+    
+    func getZipCode() -> String? {
+        guard let zipcode = UserDefaults.standard.object(forKey: UserPreferenceKey.zipcode) as? String else {
             return nil
         }
-        return zip
+        
+        return zipcode
     }
+
 }

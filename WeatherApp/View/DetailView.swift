@@ -123,7 +123,7 @@ class DetailView: UIView {
         addSubview(highTempLabel)
         highTempLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            highTempLabel.topAnchor.constraint(equalTo: weatherConditionLabel.bottomAnchor, constant: 25),
+            highTempLabel.topAnchor.constraint(equalTo: weatherConditionLabel.bottomAnchor, constant: 20),
             highTempLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             highTempLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])
@@ -133,7 +133,7 @@ class DetailView: UIView {
         addSubview(lowTempLabel)
         lowTempLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            lowTempLabel.topAnchor.constraint(equalTo: highTempLabel.bottomAnchor, constant: 25),
+            lowTempLabel.topAnchor.constraint(equalTo: highTempLabel.bottomAnchor, constant: 20),
             lowTempLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             lowTempLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])
@@ -143,7 +143,7 @@ class DetailView: UIView {
         addSubview(sunriseLabel)
         sunriseLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            sunriseLabel.topAnchor.constraint(equalTo: lowTempLabel.bottomAnchor, constant: 25),
+            sunriseLabel.topAnchor.constraint(equalTo: lowTempLabel.bottomAnchor, constant: 20),
             sunriseLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             sunriseLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])
@@ -153,7 +153,7 @@ class DetailView: UIView {
         addSubview(sunsetLabel)
         sunsetLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            sunsetLabel.topAnchor.constraint(equalTo: sunriseLabel.bottomAnchor, constant: 25),
+            sunsetLabel.topAnchor.constraint(equalTo: sunriseLabel.bottomAnchor, constant: 20),
             sunsetLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             sunsetLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])
@@ -163,7 +163,7 @@ class DetailView: UIView {
         addSubview(windSpeedLabel)
         windSpeedLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            windSpeedLabel.topAnchor.constraint(equalTo: sunsetLabel.bottomAnchor, constant: 25),
+            windSpeedLabel.topAnchor.constraint(equalTo: sunsetLabel.bottomAnchor, constant: 20),
             windSpeedLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             windSpeedLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])
@@ -173,7 +173,7 @@ class DetailView: UIView {
         addSubview(precipitationLabel)
         precipitationLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            precipitationLabel.topAnchor.constraint(equalTo: windSpeedLabel.bottomAnchor, constant: 25),
+            precipitationLabel.topAnchor.constraint(equalTo: windSpeedLabel.bottomAnchor, constant: 20),
             precipitationLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
             precipitationLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])
