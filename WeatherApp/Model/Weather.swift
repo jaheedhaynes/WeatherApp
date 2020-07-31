@@ -37,6 +37,10 @@ struct WeatherData: Codable {
     let windSpeed: Double
 }
 
+struct RecentSearchKey {
+    static let zipOrCity = "Zip or City"
+}
+
 // MARK: - Weather
 
 //struct Weather: Codable {

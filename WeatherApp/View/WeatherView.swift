@@ -20,7 +20,7 @@ class WeatherView: UIView {
     public lazy var weatherColectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 200, height: 200)
+        layout.itemSize = CGSize(width: 100, height: 200)
         let cv = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         cv.backgroundColor = .systemBackground
         return cv
@@ -63,8 +63,8 @@ class WeatherView: UIView {
         weatherLabel.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             weatherLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor, constant: 20),
-            weatherLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 0),
-            weatherLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -100)
+            weatherLabel.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 20),
+            weatherLabel.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])
     }
     
@@ -75,7 +75,7 @@ class WeatherView: UIView {
             weatherColectionView.topAnchor.constraint(equalTo: weatherLabel.bottomAnchor, constant: 20),
             weatherColectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             weatherColectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            weatherColectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -400)
+            weatherColectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -200)
         ])
     }
     

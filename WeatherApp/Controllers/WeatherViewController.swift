@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DataPersistence
 
 class WeatherViewController: UIViewController {
     
@@ -46,10 +47,15 @@ class WeatherViewController: UIViewController {
             mainView.weatherColectionView.delegate = self
             mainView.textField.delegate = self
             getZipcode(zip: selectedZipcode)
+            fetchRecentEnterZip()
         }
     
     //-------------------------------------------------------------------------------------
-
+        
+        private func fetchRecentEnterZip() {
+            guard let mostRecent = UserDefaults.standard.object(forKey: RecentSearchKey.zipOrCity) as? String else { return }
+            getZipcode(zip: mostRecent)
+        }
       
         private func getWeather(lat: Double, long: Double, placename: String) {
             WeatherAPI.getLatLong(lat: lat, long: long) { [weak self] (result) in
